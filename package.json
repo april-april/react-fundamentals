@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/april-april/react-fundamentals/issues"
   },
-  "homepage": "https://github.com/april-april/react-fundamentals#readme"
+  "homepage": "https://github.com/april-april/react-fundamentals#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1"
+  }
 }
