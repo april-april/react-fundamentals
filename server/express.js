@@ -27,4 +27,12 @@ app.use('/', authRoutes)
 app.get('/', (req, res) => {
     res.status(200).send(Template())
 })
+
+// Catch unauthorised errors
+app.use((err, req, res, next) => {
+    if (err.name === 'UnauthorizedError') {
+        res.status(401).json({"error" : err.name + ": " + err.message})
+    }
+})
+
 export default app
