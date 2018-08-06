@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 import crypto from 'crypto'
+
+// schema object
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -44,4 +46,26 @@ UserSchema.path('hashed_password').validate(function(v) {
     this.invalidate('password', 'Password is required')
   }
 }, null)
+// password for auth
+// virtual field
+UserSchema.methods = {
+  authenticate: function(plainText) {
+    return this.encryptPassword(plainText) === this.hashed_password
+  },
+  encryptPassword: function(password) {
+    if (!password) return ''
+    try {
+      return crypto
+        .createHmac('sha1', this.salt)
+        .update(password)
+        .digest('hex')
+    } catch (err) {
+      return ''
+    }
+  },
+  makeSalt: function() {
+    return Math.round((new Date().valueOf() * Math.random())) + ''
+  }
+}
 
+export default mongoose.model('User', UserSchema)
