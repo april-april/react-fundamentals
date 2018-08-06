@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 // connection url
 mongoose.Promise = global.Promise
-mongoose.connect(config.mongoUri)
+mongoose.connect(config.mongoUri, { useNewUrlParser: true })
 
 mongoose.connection.on('error', () => {
   throw new Error(`unable to connect to database: ${mongoUri}`)
