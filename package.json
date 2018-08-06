@@ -46,7 +46,13 @@
     "helmet": "^3.13.0",
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.10",
+    "material-ui": "^1.0.0-beta.43",
+    "material-ui-icons": "^1.0.0-beta.36",
     "mongoose": "^5.2.6",
-    "react-hot-loader": "^4.3.4"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-hot-loader": "^4.3.4",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   }
 }

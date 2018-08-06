@@ -5,10 +5,17 @@ import compress from 'compression'
 import cors from 'cors'
 import helmet from 'helmet'
 import Template from './../template'
+import path from 'path'
 // routes
 import userRoutes from './routes/user.routes'
 import authRoutes from './routes/auth.routes'
 
+// don't use devBundle while building code for production
+import devBundle from './devBundle'
+// comment out when building for production
+devBundle.compile(app)
+
+const CURRENT_WORKING_DIR = process.cwd()
 const app = express()
 
 app.use(bodyParser.json())
@@ -19,6 +26,8 @@ app.use(compress())
 app.use(helmet())
 // enable CORS 
 app.use(cors())
+
+app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 
 // mount routes
 app.use('/', userRoutes)
