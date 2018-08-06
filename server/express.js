@@ -5,6 +5,8 @@ import compress from 'compression'
 import cors from 'cors'
 import helmet from 'helmet'
 import Template from './../template'
+// routes
+import userRoutes from './routes/user.routes'
 
 const app = express()
 
@@ -16,6 +18,9 @@ app.use(compress())
 app.use(helmet())
 // enable CORS 
 app.use(cors())
+
+// mount routes
+app.use('/', userRoutes)
 
 app.get('/', (req, res) => {
     res.status(200).send(Template())
