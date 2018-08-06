@@ -7,6 +7,7 @@ import helmet from 'helmet'
 import Template from './../template'
 // routes
 import userRoutes from './routes/user.routes'
+import authRoutes from './routes/auth.routes'
 
 const app = express()
 
@@ -21,6 +22,7 @@ app.use(cors())
 
 // mount routes
 app.use('/', userRoutes)
+app.use('/', authRoutes)
 
 app.get('/', (req, res) => {
     res.status(200).send(Template())
