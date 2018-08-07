@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {withStyles} from 'material-ui/styles'
 import Card, {CardContent, CardMedia} from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
-import beachImg from './../assets/images/beach.jpg'
+import beachImg from './../assets/images/beachv2.jpg'
 
 const styles = theme => ({
     card: {
@@ -16,7 +16,7 @@ const styles = theme => ({
       color: theme.palette.text.secondary
     },
     media: {
-      minHeight: 330
+      minHeight: 350
     }
 })
 
