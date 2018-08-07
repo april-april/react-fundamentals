@@ -23,7 +23,6 @@ const list = () => {
 }
 
 // reading user profile
-
 const read = (params, credentials) => {
     return fetch('/api/users/' + params.userId, {
       method: 'GET',
@@ -32,6 +31,21 @@ const read = (params, credentials) => {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + credentials.t
     }
+    }).then((response) => {
+      return response.json()
+    }).catch((err) => console.log(err))
+}
+
+// updates user data
+const update = (params, credentials, user) => {
+    return fetch('/api/users/' + params.userId, {
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + credentials.t
+      },
+      body: JSON.stringify(user)
     }).then((response) => {
       return response.json()
     }).catch((err) => console.log(err))
