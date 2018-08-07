@@ -19,3 +19,28 @@ const styles = theme => ({
       minHeight: 330
     }
 })
+
+class Home extends Component {
+    render() {
+      const { classes } = this.props
+      return (
+        <Card className={classes.card}>
+            <Typography type="headline" component="h2" className={classes.title}>
+              Home Page
+            </Typography>
+            <CardMedia className={classes.media} image={beachImg} title="beachboy"/>
+            <CardContent>
+                <Typography type="body1" component="p">
+                    Welcome and Hello World
+                </Typography>
+            </CardContent>
+        </Card>
+        )
+    }
+}
+
+Home.propTypes = {
+    classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(Home)

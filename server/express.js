@@ -12,11 +12,12 @@ import authRoutes from './routes/auth.routes'
 
 // don't use devBundle while building code for production
 import devBundle from './devBundle'
-// comment out when building for production
-devBundle.compile(app)
 
 const CURRENT_WORKING_DIR = process.cwd()
 const app = express()
+
+// comment out when building for production
+devBundle.compile(app)
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
