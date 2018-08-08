@@ -28,13 +28,13 @@ class Home extends Component {
         <Card className={classes.card}>
             <Typography type="headline" component="h2" className={classes.title}>
               Home Page<br/>
-              <Link to="/users">Users</Link>
+              <Link to="/users">Users<br/>></Link>
+              <Link to="/Signup">Sign Up</Link>
             </Typography>
             <CardMedia className={classes.media} image={beachImg} title="beachboy"/>
             <CardContent>
                 <Typography type="body1" component="p">
                     Welcome and Hello World
-                    
                 </Typography>
             </CardContent>
         </Card>
