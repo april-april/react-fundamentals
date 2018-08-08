@@ -59,39 +59,39 @@ class Profile extends Component {
 		const {classes} = this.props
 		const redirectToSignin = this.state.redirectToSignin
 		if (redirectToSignin) {
-		return <Redirect to='/signin'/>
+		  return <Redirect to='/signin'/>
 		}
 		return (
-		<Paper className={classes.root} elevation={4}>
+		  <Paper className={classes.root} elevation={4}>
 			<Typography type="title" className={classes.title}>
-			Profile
+			  Profile
 			</Typography>
 			<List dense>
-			<ListItem>
+			  <ListItem>
 				<ListItemAvatar>
-				<Avatar>
+				  <Avatar>
 					<Person/>
-				</Avatar>
+				  </Avatar>
 				</ListItemAvatar>
 				<ListItemText primary={this.state.user.name} secondary={this.state.user.email}/> {
-				auth.isAuthenticated().user && auth.isAuthenticated().user._id == this.state.user._id && 
-				(<ListItemSecondaryAction>
+				 auth.isAuthenticated().user && auth.isAuthenticated().user._id == this.state.user._id && 
+				  (<ListItemSecondaryAction>
 					<Link to={"/user/edit/" + this.state.user._id}>
-					<IconButton aria-label="Edit" color="primary">
+					  <IconButton aria-label="Edit" color="primary">
 						<Edit/>
-					</IconButton>
+					  </IconButton>
 					</Link>
 					<DeleteUser userId={this.state.user._id}/>
-				</ListItemSecondaryAction>)
+				  </ListItemSecondaryAction>)
 				}
-			</ListItem>
-			<Divider/>
-			<ListItem>
+			  </ListItem>
+			  <Divider/>
+			  <ListItem>
 				<ListItemText primary={"Joined: " + (
-				new Date(this.state.user.created)).toDateString()}/>
-			</ListItem>
+				  new Date(this.state.user.created)).toDateString()}/>
+			  </ListItem>
 			</List>
-		</Paper>
+		  </Paper>
 		)
 	}
 }
