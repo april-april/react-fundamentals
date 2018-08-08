@@ -29,7 +29,8 @@ class Home extends Component {
             <Typography type="headline" component="h2" className={classes.title}>
               Home Page<br/>
               <Link to="/users">Users<br/>></Link>
-              <Link to="/Signup">Sign Up</Link>
+              <Link to="/Signup">Sign Up<br/></Link>
+              <Link to="/Signin">Sign in<br/></Link>
             </Typography>
             <CardMedia className={classes.media} image={beachImg} title="beachboy"/>
             <CardContent>
