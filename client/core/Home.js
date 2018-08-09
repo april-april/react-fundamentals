@@ -31,7 +31,6 @@ class Home extends Component {
               <Link to="/users">Users<br/>></Link>
               <Link to="/Signup">Sign Up<br/></Link>
               <Link to="/Signin">Sign in<br/></Link>
-              <Link to="/user/:id">profile<br/></Link>
             </Typography>
             <CardMedia className={classes.media} image={beachImg} title="beachboy"/>
             <CardContent>
