@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
-import Card, {CardActions, CardContent} from 'material-ui/Card'
+import Card, { CardActions, CardContent } from 'material-ui/Card'
 import Button from 'material-ui/Button'
 import TextField from 'material-ui/TextField'
 import Typography from 'material-ui/Typography'
 import Icon from 'material-ui/Icon'
 import PropTypes from 'prop-types'
-import {withStyles} from 'material-ui/styles'
+import { withStyles } from 'material-ui/styles'
 import auth from './../auth/auth-helper'
-import {read, update} from './api-user.js'
-import {Redirect} from 'react-router-dom'
+import { read, update } from './api-user.js'
+import { Redirect } from 'react-router-dom'
 
+const styles = theme => ({
 
+})
 
 // NEED TO STYLE
 
