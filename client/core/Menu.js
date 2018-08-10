@@ -44,14 +44,14 @@ const Menu = withRouter(() => (
             }
             {
                 auth.isAuthenticated() && (
-                    <span>
-                      <Link to={"/user/" + auth.isAuthenticated().user._id}>
+                <span>
+                    <Link to={"/user/" + auth.isAuthenticated().user._id}>
                         <Button style={isActive(history, "/user/" + auth.isAuthenticated().user._id)}>My Profile</Button>
-                      </Link>
-                      <Button color="inherit" onClick={() => {
-                          auth.signout(() => history.push('/'))
-                        }}>Sign out</Button>
-                    </span>)
+                    </Link>
+                    <Button color="inherit" onClick={() => {
+                        auth.signout(() => history.push('/'))
+                    }}>Sign out</Button>
+                </span>)
             }
         </Toolbar>
     </AppBar>
