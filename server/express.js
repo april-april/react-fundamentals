@@ -52,7 +52,6 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
     const sheetsRegistry = new SheetsRegistry()
     const generateClassName = createGenerateClassName()
-    const generateClassName = createGenerateClassName()
     const theme = createMuiTheme({
         palette: {
             primary: {
@@ -72,6 +71,24 @@ app.get('*', (req, res) => {
             type: 'light'
         },
     })
+    const generateClassName = createGenerateClassName()
+    const markup = ReactDOMServer.renderToString(
+        <StaticRouter location={req.url} context={context}>
+           <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
+                <MuiThemeProvider theme={theme} sheetsManager={new Map()}>
+                    <MainRouter/>
+                </MuiThemeProvider>
+           </JssProvider>
+        </StaticRouter>
+        )
+        if (context.url) {
+            return res.redirect(303, context.url)
+        }
+        const css = sheetsRegistry.toString()
+        res.status(200).send(Template({
+            markup: markup,
+            css: css
+        }))
 })
 
 // Catch unauthorised errors
