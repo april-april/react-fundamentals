@@ -8,16 +8,16 @@ import { Link } from 'react-router-dom'
 
 const styles = theme => ({
     card: {
-      maxWidth: 600,
-      margin: 'auto',
-      marginTop: theme.spacing.unit * 5
+        maxWidth: 600,
+        margin: 'auto',
+        marginTop: theme.spacing.unit * 5
     },
     title: {
-      padding:`${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
-      color: theme.palette.text.secondary
+        padding:`${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
+        color: theme.palette.text.secondary
     },
     media: {
-      minHeight: 350
+        minHeight: 350
     }
 })
 
@@ -28,9 +28,6 @@ class Home extends Component {
         <Card className={classes.card}>
             <Typography type="headline" component="h2" className={classes.title}>
               Home Page<br/>
-              <Link to="/users">Users<br/>></Link>
-              <Link to="/Signup">Sign Up<br/></Link>
-              <Link to="/Signin">Sign in<br/></Link>
             </Typography>
             <CardMedia className={classes.media} image={beachImg} title="beachboy"/>
             <CardContent>

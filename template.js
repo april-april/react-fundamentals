@@ -1,5 +1,4 @@
-export default ({markup, css}) => 
-{
+export default ({markup, css}) => {
   return `<!doctype html>
     <html lang="en">
       <head>

@@ -64,8 +64,6 @@ class DeleteUser extends Component {
     }
 }
 
-
-
 DeleteUser.propTypes = {
     userId: PropTypes.string.isRequired
 }
