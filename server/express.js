@@ -13,6 +13,17 @@ import authRoutes from './routes/auth.routes'
 // don't use devBundle while building code for production
 import devBundle from './devBundle'
 
+// modules for server side rendering
+import React from 'react'
+import ReactDOMServer from 'react-dom/server'
+import MainRouter from './../client/MainRouter'
+import StaticRouter from 'react-router-dom/StaticRouter'
+
+import { SheetsRegistry } from 'react-jss/lib/jss'
+import JssProvider from 'react-jss/lib/JssProvider'
+import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'material-ui/styles'
+import { indigo, pink } from 'material-ui/colors'
+
 const CURRENT_WORKING_DIR = process.cwd()
 const app = express()
 
@@ -36,6 +47,10 @@ app.use('/', authRoutes)
 
 app.get('/', (req, res) => {
     res.status(200).send(Template())
+})
+
+app.get('*', (req, res) => {
+    const sheetsRegistry = new SheetsRegistry()
 })
 
 // Catch unauthorised errors
