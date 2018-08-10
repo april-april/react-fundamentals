@@ -19,7 +19,7 @@ const Menu = withRouter(({history}) => (
     <AppBar position="static">
         <Toolbar>
             <Typography type="title" color="inherit">
-                Testing 12345
+               WELCOME
             </Typography>
             <Link to="/">
                 <IconButton aria-label="Home" style={isActive(history, "/")}>

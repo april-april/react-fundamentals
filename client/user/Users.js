@@ -29,18 +29,18 @@ class Users extends Component {
 
   componentDidMount() {
     list().then((data) => {
-      if (data.error) {
-        console.log(data.error)
-      } else {
-        this.setState({users: data})
-      }
+      	if (data.error) {
+        	console.log(data.error)
+      	} else {
+			this.setState({users: data})
+      	}
     })
   }
 
   render() {
     const {classes} = this.props
     return (
-      <Paper className={classes.root} elevation={4}>
+      <Paper className={classes.root} elevation={5}>
         <Typography type="title" className={classes.title}>
           All Users
         </Typography>

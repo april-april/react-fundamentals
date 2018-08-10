@@ -27,7 +27,6 @@ class Home extends Component {
       return (
         <Card className={classes.card}>
             <Typography type="headline" component="h2" className={classes.title}>
-              Home Page<br/>
             </Typography>
             <CardMedia className={classes.media} image={beachImg} title="beachboy"/>
             <CardContent>
