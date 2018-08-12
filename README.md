@@ -1,23 +1,49 @@
-# React fundamentals
+# React Infrastructure (Group Project)
 
-This will be a simple project (full-stack) that I will build using reactlols
 
-(Tonight is going to be a long night..)
+## Getting Started
 
-Simple CRUD app with authentication capabilities
+Make sure you have the latest version of Node.js installed. If you don't have it, or are an older version, you can visit Nodejs.org and download the installer.
 
-nothing fancy
 
-features:
--log in
--auth
--list of users
+### Installing
 
-Here we go, fam
+A step by step series of examples that tell you have to get a development environment running
 
-shoutouts:
-fam(of course)
-Thomas (this guy is a savage and he has 2 mcdonald coins)
-Me (..)
+Intital Install:
 
-(Yes, I will update the readme after the project is done. Don't judge me, fam)
+```
+npm install
+```
+
+Running the program locally:
+```
+npm start
+```
+
+## Built With
+
+* [Node.js](https://nodejs.org/en/)
+* [Express](https://expressjs.com/) 
+* [MongoDB](https://www.mongodb.com/)
+* [React.js](https://reactjs.org/) 
+
+
+## Contributing
+
+
+## Authors
+
+* **Vincent Luong** - *Initial work* - [Vincent Luong](https://github.com/april-april)
+* **Thomas Nguyen** - *Design and Database* - [Thomas Nguyen](https://github.com/thomasnguyen)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Thomas Nguyen
+* Everyone that has assisted me in this journey
