@@ -8,7 +8,7 @@ Make sure you have the latest version of Node.js installed. If you don't have it
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development environment running
+A step by step series of examples that tell you how to get the development environment running
 
 Intital Install:
 
